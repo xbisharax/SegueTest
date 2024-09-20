@@ -1,24 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C6d-f8-fe1">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="aIq-Qp-SNi">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="C6d-f8-fe1" customClass="ViewController" customModule="SegueTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OQL-uT-ZMt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpc-R3-qT1">
+                                <rect key="frame" x="160" y="350" width="73" height="118"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="VIEW1"/>
+                                <connections>
+                                    <action selector="click:" destination="C6d-f8-fe1" eventType="touchUpInside" id="0PD-aL-IKq"/>
+                                    <action selector="unwind:" destination="C6d-f8-fe1" eventType="touchUpInside" id="5ic-1r-HZL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ett-3A-dnF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mpc-R3-qT1" firstAttribute="top" secondItem="ett-3A-dnF" secondAttribute="top" constant="350" id="9U7-xz-8ZP"/>
+                            <constraint firstItem="ett-3A-dnF" firstAttribute="trailing" secondItem="mpc-R3-qT1" secondAttribute="trailing" constant="160" id="C8a-ut-pz7"/>
+                            <constraint firstItem="ett-3A-dnF" firstAttribute="bottom" secondItem="mpc-R3-qT1" secondAttribute="bottom" constant="374" id="Jd4-4Y-9v6"/>
+                            <constraint firstItem="mpc-R3-qT1" firstAttribute="leading" secondItem="ett-3A-dnF" secondAttribute="leading" constant="160" id="RbG-fV-F67"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="u6X-AO-OXa" kind="presentation" identifier="Manual" id="BFP-c2-nGv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7M-K7-zEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-176" y="-175"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="max-Xm-CQ9">
+            <objects>
+                <viewController id="u6X-AO-OXa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vf8-E7-nSg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEw-5v-zQ5">
+                                <rect key="frame" x="136" y="487" width="121" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="VIEW2"/>
+                                <connections>
+                                    <segue destination="aCX-JL-kkL" kind="presentation" id="n2t-Px-FVV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy4-xZ-qUG">
+                                <rect key="frame" x="136" y="321" width="121" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Go Home"/>
+                                <connections>
+                                    <segue destination="C6d-f8-fe1" kind="presentation" id="VVB-hd-vPX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VC1-Rr-hZ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sy4-xZ-qUG" firstAttribute="leading" secondItem="VC1-Rr-hZ2" secondAttribute="leading" constant="136" id="5c0-VU-yAt"/>
+                            <constraint firstItem="VC1-Rr-hZ2" firstAttribute="trailing" secondItem="Sy4-xZ-qUG" secondAttribute="trailing" constant="136" id="P6G-7o-fjb"/>
+                            <constraint firstItem="qEw-5v-zQ5" firstAttribute="top" secondItem="Sy4-xZ-qUG" secondAttribute="bottom" constant="124" id="RBg-iP-cSV"/>
+                            <constraint firstItem="qEw-5v-zQ5" firstAttribute="leading" secondItem="VC1-Rr-hZ2" secondAttribute="leading" constant="136" id="frR-SA-r7e"/>
+                            <constraint firstItem="VC1-Rr-hZ2" firstAttribute="trailing" secondItem="qEw-5v-zQ5" secondAttribute="trailing" constant="136" id="h8L-oW-Ddp"/>
+                            <constraint firstItem="Sy4-xZ-qUG" firstAttribute="top" secondItem="VC1-Rr-hZ2" secondAttribute="top" constant="321" id="iMw-wq-N9T"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yY7-ji-Onz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="704.58015267175574" y="-175.35211267605635"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wQb-5b-yod">
+            <objects>
+                <viewController id="aCX-JL-kkL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3b-sm-1JP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeT-Sd-j7W">
+                                <rect key="frame" x="136" y="495" width="121" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="VIEW3"/>
+                                <connections>
+                                    <segue destination="nZx-NW-bSd" kind="presentation" id="SFY-ZH-5qW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kru-ce-LSf">
+                                <rect key="frame" x="136" y="321" width="121" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Go Home"/>
+                                <connections>
+                                    <segue destination="C6d-f8-fe1" kind="presentation" id="zdr-dD-elo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LjP-wn-hoU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LjP-wn-hoU" firstAttribute="trailing" secondItem="kru-ce-LSf" secondAttribute="trailing" constant="136" id="hd9-Yw-v7N"/>
+                            <constraint firstItem="WeT-Sd-j7W" firstAttribute="leading" secondItem="LjP-wn-hoU" secondAttribute="leading" constant="136" id="lNG-HR-Gbk"/>
+                            <constraint firstItem="LjP-wn-hoU" firstAttribute="trailing" secondItem="WeT-Sd-j7W" secondAttribute="trailing" constant="136" id="qWD-kp-hnk"/>
+                            <constraint firstItem="kru-ce-LSf" firstAttribute="top" secondItem="LjP-wn-hoU" secondAttribute="top" constant="321" id="quE-WL-V07"/>
+                            <constraint firstItem="kru-ce-LSf" firstAttribute="leading" secondItem="LjP-wn-hoU" secondAttribute="leading" constant="136" id="qub-fG-BSC"/>
+                            <constraint firstItem="WeT-Sd-j7W" firstAttribute="top" secondItem="kru-ce-LSf" secondAttribute="bottom" constant="132" id="xhn-dF-W0v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJd-Xr-FrM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="-175"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IGs-LG-yVe">
+            <objects>
+                <viewController id="nZx-NW-bSd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z8N-w1-xcO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM0-Qi-6F9">
+                                <rect key="frame" x="136" y="444" width="121" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="VIEW4"/>
+                                <connections>
+                                    <segue destination="BO9-2A-X5M" kind="presentation" id="1mk-MX-nlS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fI-UO-bj7">
+                                <rect key="frame" x="136" y="256" width="121" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Go Home"/>
+                                <connections>
+                                    <segue destination="C6d-f8-fe1" kind="presentation" id="XS4-5h-eKj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vTb-k9-tcu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0fI-UO-bj7" firstAttribute="leading" secondItem="vTb-k9-tcu" secondAttribute="leading" constant="136" id="7iG-k6-ysS"/>
+                            <constraint firstItem="tM0-Qi-6F9" firstAttribute="leading" secondItem="vTb-k9-tcu" secondAttribute="leading" constant="136" id="L3o-HT-vqP"/>
+                            <constraint firstItem="vTb-k9-tcu" firstAttribute="trailing" secondItem="tM0-Qi-6F9" secondAttribute="trailing" constant="136" id="POU-3f-tz1"/>
+                            <constraint firstItem="0fI-UO-bj7" firstAttribute="top" secondItem="vTb-k9-tcu" secondAttribute="top" constant="256" id="q7l-Q8-mqC"/>
+                            <constraint firstItem="tM0-Qi-6F9" firstAttribute="top" secondItem="0fI-UO-bj7" secondAttribute="bottom" constant="146" id="uk7-rp-v3g"/>
+                            <constraint firstItem="vTb-k9-tcu" firstAttribute="trailing" secondItem="0fI-UO-bj7" secondAttribute="trailing" constant="136" id="zxc-LQ-7t0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao4-HO-c1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2408" y="-175"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nqh-EY-7nO">
+            <objects>
+                <viewController id="BO9-2A-X5M" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="arC-1g-SXc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrQ-Kn-i0n">
+                                <rect key="frame" x="136" y="350" width="121" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Go Home"/>
+                                <connections>
+                                    <segue destination="C6d-f8-fe1" kind="presentation" id="WlO-jU-AVq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="beb-Su-wKi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qrQ-Kn-i0n" firstAttribute="leading" secondItem="beb-Su-wKi" secondAttribute="leading" constant="136" id="Yz9-6Y-2n7"/>
+                            <constraint firstItem="beb-Su-wKi" firstAttribute="trailing" secondItem="qrQ-Kn-i0n" secondAttribute="trailing" constant="136" id="iAk-0z-UCI"/>
+                            <constraint firstItem="qrQ-Kn-i0n" firstAttribute="top" secondItem="beb-Su-wKi" secondAttribute="top" constant="350" id="lEB-oF-XPN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VU2-Gn-M0r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3263" y="-175"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VVB-hd-vPX"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
